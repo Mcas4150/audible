@@ -4,58 +4,18 @@
 
 
 <div class="row">
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
+  <% @events.each do |event| %>
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-2"><%= event.datetime %></div>
+      <div class="col-xs-3"><%= event.name %></div>
+      <div class="col-xs-2"><%= event.location %></div>
+      <div class="col-xs-2"><%= event.note %></div>
+      <div class="col-xs-3"><%= event.image %></div>
+    </div>
   </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
-  <div class="col-xs-6 col-sm-6 col-md-3 boxy">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-  </div>
+  <%end%>
+
 </div>
 
 
