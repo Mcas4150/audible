@@ -3,6 +3,11 @@ $linkColor: Black;
 
 @import "bootstrap";
 
+
+a {
+  color: black;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -18,7 +23,14 @@ $linkColor: Black;
     border-bottom: 1px solid #d7d7d7;
 }
 
+.cookiePolicy {
 
+opacity:0;
+}
+
+.sc-background-orange {
+    background-color: #666666
+}
 nav {
       display: inline-block;
     float: left;
