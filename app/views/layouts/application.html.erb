@@ -8,10 +8,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="navbar-wagon">  <a href="/" class="navbar-wagon-brand">
-    <img src="https://i.imgur.com/KtlUlik.png" alt="logo">
-  </a></div>
+  <body style="font-family: Open sans; background-color: black; color: white;">
+    <section id="navbar-wagon">
+      <div>
+
+
+      <nav> <a href="/" class="navbar-wagon-brand">
+        <img src="https://i.imgur.com/KtlUlik.png" alt="logo">
+      </a>
+        <a class="navbar-wagon-item" href="/">Mixes</a>
+         <a class="navbar-wagon-item" href="/">Tracks</a>
+          <a class="navbar-wagon-item" href="/">Shows</a>
+           <a class="navbar-wagon-item" href="/">Shop</a>
+      </nav>
+      </div>
+    </section>
 
     <%= yield %>
   </body>

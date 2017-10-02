@@ -1,4 +1,4 @@
-.navbar-wagon {
+#navbar-wagon {
   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   border-bottom: 1px;
   border-width: 1px;
@@ -27,7 +27,7 @@
 }
 
 /* Right section */
-.navbar-wagon-right {
+.navbar-wagon-left {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,12 +36,12 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 5px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: #d7d7d7;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
