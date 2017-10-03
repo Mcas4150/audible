@@ -22,6 +22,10 @@ class EventsController < ApplicationController
     @event.destroy
   end
 
+  def index
+
+  end
+
 
   private
 

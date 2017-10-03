@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
   get 'events/new'
 
   get 'events/create'
