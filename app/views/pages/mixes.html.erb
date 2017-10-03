@@ -1,4 +1,4 @@
-
+<!--
 <div class="container">
   <div class="row" align="middle">
     <div class="col-xs-12 col-sm-6 release">
@@ -15,3 +15,65 @@
 
   </div>
 </div>
+ -->
+
+<!-- <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9086934&amp;color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+
+
+
+ -->
+
+ <!doctype html>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://w.soundcloud.com/player/api.js"></script>
+  <script>
+   $(document).ready(function() {
+     var widget = SC.Widget(document.getElementById('soundcloud_widget'));
+     widget.bind(SC.Widget.Events.READY, function() {
+       console.log('Ready...');
+     });
+     $('button').click(function() {
+       widget.toggle();
+     });
+   });
+  </script>
+</head>
+<body>
+
+  <button>Play / Pause</button>
+   <iframe id="soundcloud_widget"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/321842520&show_artwork=false&liking=false&sharing=false&auto_play=true&amp;color=000000"
+      width="420"
+      height="120"
+      frameborder="no"></iframe>
+        <iframe id="soundcloud_widget"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/323505855&show_artwork=false&liking=false&sharing=false&auto_play=true&amp;color=000000"
+      width="420"
+      height="120"
+      frameborder="no"></iframe>
+        <iframe id="soundcloud_widget"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/323507381&show_artwork=false&liking=false&sharing=false&auto_play=true&amp;color=000000"
+      width="420"
+      height="120"
+      frameborder="no"></iframe>
+        <iframe id="soundcloud_widget"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/320604446&show_artwork=false&liking=false&sharing=false&auto_play=true&amp;color=000000"
+      width="420"
+      height="120"
+      frameborder="no"></iframe>
+        <iframe id="soundcloud_widget"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293056740&show_artwork=false&liking=false&sharing=false&auto_play=true&amp;color=000000"
+      width="420"
+      height="120"
+      frameborder="no"></iframe>
+        <iframe id="soundcloud_widget"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/278891202&show_artwork=false&liking=false&sharing=false&auto_play=true&amp;color=000000"
+      width="420"
+      height="120"
+      frameborder="no"></iframe>
+
+</body>
+</html>
