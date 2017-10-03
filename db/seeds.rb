@@ -22,7 +22,7 @@ def events_creation(date, name, location, note, image)
     event.save
 end
 
-events_creation("2017-12-28", "Good Room w/ DJ STINGRAY, Drvg Cvlture, Ole Mic Odd", "Brooklyn", "fire" , nil)
+events_creation(Date.new(2017, 12, 28), "Good Room w/ DJ STINGRAY, Drvg Cvlture, Ole Mic Odd", "Brooklyn", "fire" , nil)
 events_creation("2017-11-04", "Lower Lower with Drvg Cvlture, Ole Mic Odd", "Boston", nil , nil)
 events_creation("2017-10-28", "Brooklyn Bizarre w/ Broken English Club", "Brooklyn", nil, "https://i.imgur.com/dbItSVI.jpg")
 events_creation("2017-10-06", "w/ Aisha Devi", "Toronto", nil , nil)
