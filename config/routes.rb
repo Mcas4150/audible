@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'events/new'
+
+  get 'events/create'
+
+  get 'events/update'
+
+  get 'events/edit'
+
+  get 'events/destroy'
+
   get 'pages/home'
   get 'pages/about'
   get 'pages/mixes'
