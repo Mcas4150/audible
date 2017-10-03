@@ -1,17 +1,17 @@
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding-right:10px;">
 
 
 <div class="row">
   <% @events.each do |event| %>
-  <div class="col-xs-12">
+  <div class="col-12 boxy">
     <div class="row">
-      <div class="col-xs-2"><%= event.datetime %></div>
-      <div class="col-xs-3"><%= event.name %></div>
-      <div class="col-xs-2"><%= event.location %></div>
-      <div class="col-xs-2"><%= event.note %></div>
-      <div class="col-xs-3"><%= event.image %></div>
+      <div class="col-xs-2 col-sm-2"><%= event.date %></div>
+      <div class="col-xs-3 col-sm-5"><%= event.name %></div>
+      <div class="col-xs-2 col-sm-2 "><%= event.location %></div>
+      <div class="col-xs-2 col-sm-2"><%= event.note %></div>
+      <div class="col-xs-12 col-sm-1" style="display:flex; flex-direction: row; justify-content: flex-end;"><img src = '<%= event.image %>' style= "width: auto; height: 100px;"></div>
     </div>
   </div>
   <%end%>
@@ -30,7 +30,7 @@
     });
 </script>
  -->
-
+<!--
 
 <div id="mixcloud-container" style="position: fixed;
     left: 0;
@@ -42,9 +42,10 @@
 
 
 
-</div>
-
+</div> -->
+<!--
 
 <script src="//www.mixcloud.com/media/js/widgetApi.js" type="text/javascript" onload="handleMixcloudLoading()"></script>
 
-https://api.mixcloud.com/spartacus/party-time/embed-html/
+https://api.mixcloud.com/spartacus/party-time/embed-html/ -->
+2017

@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-def events_creation(datetime, name, location, note, image)
+def events_creation(date, name, location, note, image)
   event = Event.new(
     {
-      datetime: datetime,
+      date: date,
       name: name,
       location: location,
       note: note,
