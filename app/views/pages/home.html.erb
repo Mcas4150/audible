@@ -55,14 +55,14 @@
 
 
 
-<div class="container-fluid" style="padding-right:10px;">
+<div class="container-fluid" style="padding-right:10px; margin:10px;">
 
 
 <div class="draggable">
   <% @events.each do |event| %>
   <div class="col-10">
     <div  class="row boxy">
-      <div class="col-xs-2 col-sm-3"><%= event.date %></div>
+      <div class="col-xs-2 col-sm-2"><%= event.date %></div>
       <div class="col-xs-3 col-sm-5" style="display:flex; flex-direction: row; align-items: center;"><%= event.name %></div>
       <div class="col-xs-2 col-sm-2 " style="display:flex; flex-direction: row; align-items: : center;"><%= event.location %></div>
     <!--   <div class="col-xs-2 col-sm-1"><%= event.note %></div> -->
@@ -87,9 +87,10 @@
 
 </div>
 
-<div class="container-fluid" style="margin:0px">
+<div class="container-fluid" style="margin:10px">
   <div class="row">
-  <div class="col-xs-12 col-sm-9" style="height:300px;"">
+  <div class="col-xs-12 col-sm-9" style=" display: flex;
+    flex-direction: row; align-self: flex-end;">
   <div class="draggable" style="padding-left:10px;">
           <pre style="font: 4px/2px monospace; color:purple;">                      :.`
                      ;;;;  ;;:
@@ -155,7 +156,8 @@
   2017
       </div>
   </div >
-  <div class="col-xs-12 col-sm-3 draggable"  style="border-radius:3px; height:325px; width:325px; padding-left:10px; padding-right:10px; padding-bottom:0px; padding-top:10px; background-color:#666666">
+  <div class="col-xs-12 col-sm-3 draggable"  style="border-radius:3px; height:325px; width:325px; padding-left:10px; padding-right:10px; padding-bottom:0px; padding-top:10px; background-color:#666666; display: flex;
+    flex-direction: row; align-self: center; justify-content: center;">
  <iframe id="soundcloud_widget" width="100%" height="300" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9086934&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_playcount=false&amp;sharing=false"></iframe>
   </div>
   </div>
