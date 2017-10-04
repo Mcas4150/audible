@@ -33,4 +33,6 @@ events_creation("2017-06-06", "Boston Hassle", "Boston", nil, "https://i.imgur.c
 events_creation("2017-04-15", "Agites Du Bocal", "Rennes", nil, nil)
 events_creation("2017-04-14", "L'oiseau Bleu", "Brussels", nil, nil )
 events_creation("2017-04-08", "Brutaz", "Warsaw", nil, nil )
-events_creation("2017-04-07", "ACUD", "Berlin", nil, nil )
+events_creation("2017-04-07", "Acud Macht Neu", "Berlin", nil, nil )
+events_creation("2017-04-01", "Inkonst", "Mälmö", nil, nil )
+
