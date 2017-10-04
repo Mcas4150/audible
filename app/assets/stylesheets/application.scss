@@ -56,7 +56,8 @@ nav {
 .boxy {
 
   // border-color: #fcfcfc;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   // border-top: .5px dashed #fcfcfc;
   padding-left: 5px;
   padding-right: 5px;
@@ -66,12 +67,16 @@ nav {
 }
 
 
-/* Style the Image Used to Trigger the Modal */
-#myImg {
-    transition: 0.3s;
+.draggable {
+  cursor: move;
 }
 
-#myImg:hover {opacity: 0.7;}
+/* Style the Image Used to Trigger the Modal */
+// #myImg {
+//     transition: 0.3s;
+// }
+
+// #myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -97,7 +102,7 @@ nav {
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
+.caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -109,7 +114,7 @@ nav {
 }
 
 /* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
+.modal-content, .caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
