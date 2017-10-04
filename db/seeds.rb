@@ -30,3 +30,7 @@ events_creation("2017-09-30", "Lost Soul X Subliminate", "Brooklyn", "boat Parti
 events_creation("2017-09-29", "Elastic presents Plasticity", "Boston", "wooo", "https://i.imgur.com/Yn62mVf.jpg")
 events_creation("2017-06-10", "Motherlode", "Boston", nil, "https://i.imgur.com/iuGw5fq.jpg")
 events_creation("2017-06-06", "Boston Hassle", "Boston", nil, "https://i.imgur.com/qy7XZg6.jpg")
+events_creation("2017-04-15", "Agites Du Bocal", "Rennes", nil, nil)
+events_creation("2017-04-14", "L'oiseau Bleu", "Brussels", nil, nil )
+events_creation("2017-04-08", "Brutaz", "Warsaw", nil, nil )
+events_creation("2017-04-07", "ACUD", "Berlin", nil, nil )
