@@ -31,8 +31,51 @@
 }); };
 
   </script>
+<script>
+$(document).ready(function(){
+    animateDiv();
 
+});
 
+function makeNewPosition(){
+
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh,nw];
+
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.a').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();
+    });
+
+};
+
+function calcSpeed(prev, next) {
+
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+
+    var greatest = x > y ? x : y;
+
+    var speedModifier = 0.1;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+
+}
+</script>
 
 
 </head>
@@ -73,7 +116,7 @@
 <div class="container-fluid" style="padding-right:10px; margin:5px;">
 
 <div class= "row">
-  <div class="col-xs-12 col-sm-8 draggable" style="border">
+  <div class="col-xs-12 col-sm-8 draggable">
 
 
   <% @events.each do |event| %>
@@ -207,7 +250,7 @@
  <iframe id="soundcloud_widget" width="100%" height="100%" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9086934&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_playcount=false&amp;sharing=false" ></iframe>
   </div>
 
-  <img class="draggable" src="https://68.media.tumblr.com/c16ecb425a347f89c305c116fa6a6f6d/tumblr_ntmautrf8O1ud945wo1_100.gif" style="height:75px; width:75px ">
+  <!-- <div class="a"><div class="draggable"><%= image_tag "turningheaded.gif"%></div></div> -->
   </div>
 </div>
 
