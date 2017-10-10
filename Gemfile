@@ -16,6 +16,10 @@ gem 'puma', '~> 3.0'
 
 gem 'bootstrap-datepicker-rails'
 
+gem "rest-client"
+gem 'json'
+
+
 
 gem 'bootstrap'
 
