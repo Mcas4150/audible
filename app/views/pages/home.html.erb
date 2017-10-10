@@ -163,9 +163,9 @@ function calcSpeed(prev, next) {
   <% @events.each do |event| %>
 
     <div  class="row boxy">
-      <div class="col-xs-2 col-sm-2"><%= event.date %></div>
+      <div class="col-xs-2 col-sm-2" style="color:white"><%= event.date %></div>
       <div class="col-xs-3 col-sm-6" style="display:flex; flex-direction: row; align-items: center;"><%= event.name %></div>
-      <div class="col-xs-2 col-sm-3 " style="display:flex; flex-direction: row; align-items: : center;"><%= event.location %></div>
+      <div class="col-xs-2 col-sm-3 " style="display:flex; flex-direction: row; align-items: : center; color:#898909"><%= event.location %></div>
 
     </div>
 
@@ -222,9 +222,7 @@ function calcSpeed(prev, next) {
 
 <div class="container-fluid" style="margin:10px">
 
-<div id="book"  class= "draggable" style="border-radius:3px; max-width: 18vw; padding:5px;  display:none; "><div  style="">
-<%=  mail_to("Booking", 'isabella.koen@gmail.com')%>
-  </div></div>
+
 
 
 
@@ -306,5 +304,6 @@ function calcSpeed(prev, next) {
 
 <div id="myFun" class="a" style="display:none;"><div class="draggable"><%= image_tag "turningheaded.gif"%></div></div>
   </div>
+
 </div>
 
