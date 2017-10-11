@@ -9,8 +9,37 @@
   <script src="https://w.soundcloud.com/player/api.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+var myVar = setInterval(myTimer, 1000);
 
-  <script>
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+<!-- <script>
+  var myAppear = setInterval(myEvent,1000)
+
+  function ()
+</script> -->
+<script>
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 0;
+  var id = setInterval(frame, 20);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+</script>
+
+ <!--  <script>
   $( function() {
     $( ".draggable" ).draggable();
   } );
@@ -112,198 +141,78 @@ function calcSpeed(prev, next) {
     }
 }
 
-</script>
+</script> -->
 
 
 </head>
-<body>
+<body onload="move();">
+
+<div id="top">Memory Diagnostics Tool</div>
+
+<div id="middle" style="color:silver; font-size:1.2em;">
+A problem has been detected and windows has been shutdown to prevent damage to your computer.
+<br>
+<br>
+ISABELLA_
+<br>
+<br>
+If this is the first time you've seen this error, <a>click here</a>. If this screen appears again, follow these steps:
+<br>
+<br>
+Check to make sure any new hardware or software is properly installed. If problems continue, enable Safe Mode.
+<br>
 
 
+Status:
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+<br>
+<!-- <button onclick="move()">Click Me</button> -->
 
-  <div class="navbar-wagon" style="display:flex; flex-direction: row;">
-
-
-                  <div style="padding-left:0px; ">
-
-                     <div class="draggable" style="padding-left:10px; font-size:2em; color:white;">
- <img class="draggable" src="https://68.media.tumblr.com/997a9708f99c686d3449b552ba8f36d5/tumblr_nuv17qV0Mf1ud945wo2_75sq.gif">Isabella
-                     </div>
-
-
-                    </div>
-
-
-
-
-
-         <div style="padding-left:3vw; padding-top:10px padding-bottom:10px; text-align: center; justify-content: center;">
-        <div class="row buttons draggable">
-          <button onclick="myFunction()" id="listen"  style="color:#0056b3; border-color:#0056b3; background-color:black;"><div class="draggable"> Listen </div></button>
-           <button onclick="myFunction2()" id="booking" style="color:#0056b3; border-color:#0056b3; background-color:black;"><div class="draggable"> Booking </div></button>
-           <!-- <button id="about" style="color:#0056b3; border-color:#0056b3; background-color:black;"><div class="draggable"> About </div></button> -->
-            <button onclick="myFunction4()" id="fun" style="color:#0056b3; border-color:#0056b3; background-color:black;"><div class="draggable"> Fun </div></button>
-            <div id="book"  class= "draggable" style="border-radius:3px; max-width: 18vw; padding:5px;  display:none; "><div  style="">
-<%=  mail_to("Booking", 'isabella.koen@gmail.com')%>
-  </div></div>
-          </div>
-         </div>
-         <div><time datetime='Time.now'></time></div>
-      </div>
-
-<!--
-    <img class = "draggable" src="https://68.media.tumblr.com/a7226d553f7a623290cd1c7717017de5/tumblr_ntzi1nO1St1ud945wo1_250.gif">
- -->
-
-<div class="container-fluid" style="padding-right:10px; margin:5px;">
-
-<div class= "row">
-  <div class="col-xs-12 col-sm-8 draggable">
+<div class= "row" style="margin:0px;">
+  <div class="col-xs-12 col-sm-8 draggable" style="margin:0px">
 
 
   <% @events.each do |event| %>
 
-    <div  class="row boxy">
-      <div class="col-xs-2 col-sm-2" style="color:white"><%= event.date %></div>
+    <div  class="row boxy" style="color:yellow;">
+      <div class="col-xs-2 col-sm-2"><%= event.date %></div>
       <div class="col-xs-3 col-sm-6" style="display:flex; flex-direction: row; align-items: center;"><%= event.name %></div>
-      <div class="col-xs-2 col-sm-3 " style="display:flex; flex-direction: row; align-items: : center; color:#898909"><%= event.location %></div>
+      <div class="col-xs-2 col-sm-3 " style="display:flex; flex-direction: row; align-items: : center;"><%= event.location %></div>
 
     </div>
 
   <%end%>
 
 </div>
-<!--
-<div>
-  <% @events.each do |event| %>
-<div   class="col-2" style="display:flex; flex-direction: row; justify-content: flex-end; cursor: zoom-in;"><img   src = '<%= event.image %>' style= "width: 100%; height: 100%;" alt="">
 
-      </div>
-    <%end%>
-
-</div>
- -->
- <div class="col-xs-12 col-sm-4" style= "width: 40vh; height:30vh;" >
-<div id="carouselExampleControls" class="carousel slide  draggable" data-ride="carousel"  >
-  <div class="carousel-inner" role="listbox" style="height:50%; border-style:ridge; border-width: 5px; border-color:#666666;">
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="https://i.imgur.com/dbItSVI.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://i.imgur.com/pyw2knb.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://i.imgur.com/Yn62mVf.jpg" alt="Third slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://i.imgur.com/iuGw5fq.jpg" alt="Fourth slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="https://i.imgur.com/qy7XZg6.jpg" alt="Fifth slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>
+<div class="col-xs-12 col-sm-4 draggable" style="margin:0px">
+Technical information:
+<br>
+<br>
+overall test status: incomplete
+<br>
+<br>
+Checking for memory problems...
+<br>
+<br>
+This might take several minutes.
+<br>
+<br>
+Beginning dump of physical memory
+<br>
+<br>
+Physical memory dump complete
+<br>
+<br>
+Contact <%=  mail_to('isabella.koen@gmail.com',"system administrator")%> for further assistance
 
 </div>
 
-
-</div>
-
-
-
-
-<div class="container-fluid" style="margin:10px">
-
-
-
-
-
-  <div class="row">
-  <div class="col-xs-12 col-sm-4" style=" display: flex;
-    flex-direction: row; align-self: flex-end; ">
-  <div class="draggable" style="padding-left:10px; height:35vh">
-          <pre style="font: 4px/2px monospace; color:purple;">                      :.`
-                     ;;;;  ;;:
-                    ;;;:``;;;;;
-                  `;;;:;;;;;;;:
-                 ,;;;;;;;;;;;:
-                :;;;;;;;;;;;:
-               ;;;;;:;;;;;;:
-              ;;;;;;;;;;;;:
-             ;;;;;;;;;;;;;
-            ;;;;;;;;;;;;;
-           ;;;;;;;;;;;;;
-          :;;;;;;;;;;;;
-         `;;;;;;;;;;;;
-         ;;;;;;;;;;;;`
-        ;;;;;;;;;;;;;
-       `;;;;;;;;;;;;
-       ;;;;;;;;;;;;.
-      `;;;;;;';;;;;
-      ;;;;;;;';;;;,
-      ;;;;;;+;;;;;
-     ;;;;;;;';;;;;
-     ;;;;;;';;;;;,
-    :;;;;;;';;;;;`
-    ;;;;;;';;;;;;                                                `,:;;;;;;;;;;;;::::;;;;;;;;
-    ;;;;;;+;;;;;;`                                       `,:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-   `;;;;;;';;;;;;:+;                                  .;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-   :;;;;;';;;;;;;:+++++++`...,,,::;;;'++++++++++++'''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-   ;;;;;;+;;;;;;;;'++++++++++'''''++++##++++++++++++.:,,:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-   ;;;;;;;;;;;;;;;;;:''':;++++++++++++++++++++++++++#....;;;;;;;;;;;;;;;;;;';;;;';';';';'';;;;
-   ;;;;;';;;;;;;;;;;;;:``````#++++++++++++++++++++++#....;;;;;;;;;;;;';;;;;;';';';';';';;;';;;
-  ,;;;;;+;;;;;;;;;;;;;:`..```#++++++++++++++++++++++#....;;;;;;;;;;;;';;;;':';';';';;;;;;;';;;
-  ;;;;;;';;;;;;;;;;;;;;`..```#++++++++++++++++++++++`...,;;;;;;;;;;;;';;;;':';';';';';';';;;;;
-  ;;;;;;;;;;;;;;;;;;;;;``````++++++++++++++++++++++#....;;;;;;;;;;;;';;;;;';';';';';';';';;;;
-  ;;;;;;;;;;;;;;;;;;;;;;;:::##########@#++';;:,,..`   ;;;;;;;;;;;;;;;;;;;;;;;;;';';';';';;;;:
-  ;;;;;;;;;;;;;;;;;;;;;::                                  ``.,:;;;;;;;:,.`` ` `        .;;
-  ;;;;;';;;;;;;;;;;;;.
-  ;;;;;';;;;;;;;;;;,
-  ;;;;;+;;;;;;;;;:
-  ,;;;;';;;;;;;;;
-   ;;;;;;;;;;;;;
-   ,;;;:;;;;;;;
-    ;;;;;;;;;;:
-    ;;;;;;';;;
-    :;;;;;;;;;
-    ;;;;;;;;;:
-    ;;;;;;;.:
-    ;;.'''``;
-   ;;;:'''``;
-  ;;;;''''``;,
- ,;;;,''''``;;
- ;;;;;''''``:;
- ;;;:'''''```;
- ;;;.::;'',,:;
-`;;:`:;;;;;::;
-,;;:`:;;;;;,:;
-:;;,.;;;;;;,::
- ;;.,;;;;;:.:.
-  ;.:;;;;;:.:
-   :;;;;;;:,.
-       ```
-</pre>
-  2017
-      </div>
-  </div >
-
-
-
-  <div id="myDIV" class="col-xs-12 col-sm-3 draggable"  style="border-radius:3px; width:325px; height:325px; padding:5px; background-color:#999999; display: flex;
-    flex-direction: row; align-self: center; justify-content: center; border-style:ridge; border-width: 5px; border-color:#666666; display: none;">
- <iframe id="soundcloud_widget" width="100%" height="100%" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9086934&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_playcount=false&amp;sharing=false" ></iframe>
-  </div>
-
-<div id="myFun" class="a" style="display:none;"><div class="draggable"><%= image_tag "turningheaded.gif"%></div></div>
-  </div>
 </div>
 </div>
-
+<div id="bottom">
+  <span style="left:0;">2017</span>
+  <span id="demo" style="right:100%"></span>
+</div>

@@ -8,6 +8,32 @@ a {
   color: white;
 }
 
+
+#top {
+  height: 3vh;
+  width:100%;
+  margin:15px;
+  background-color:#BCC2B6;
+  text-align:center;
+  color: #040e86;
+}
+
+#middle {
+  margin-left:15px;
+  margin-right:15px;
+
+}
+
+#bottom {
+  bottom: 0;
+  height: 3vh;
+  width:100%;
+  margin:15px;
+  background-color:#BCC2B6;
+  color: #040e86;
+
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -174,7 +200,7 @@ position:fixed;
 
 a:-webkit-any-link {
   text-decoration: none;
-  color: #898909;
+  color: limegreen;
 }
 
 a:hover{
@@ -200,6 +226,22 @@ a:hover{
   margin-left:5px;
   text-decoration: none;
 }
+
+
+#myProgress {
+  width: 100%;
+  height: 3vh;
+  position: relative;
+  background-color: #040e86;
+}
+
+#myBar {
+  background-color: #BCC2B6;
+  width: 10px;
+  height: 3vh;
+  position: absolute;
+}
+
 
 
 .release {
