@@ -38,13 +38,6 @@ function move() {
   }
 }
 </script>
-
- <!--  <script>
-  $( function() {
-    $( ".draggable" ).draggable();
-  } );
-  </script>
-
   <script>
    $(document).ready(function() {
      var widget = SC.Widget(document.getElementById('soundcloud_widget'));
@@ -56,6 +49,81 @@ function move() {
      });
    });
   </script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>
+  function myFunction2() {
+    var x = document.getElementById("2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>
+  function myFunction3() {
+    var x = document.getElementById("3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>
+  function myFunction4() {
+    var x = document.getElementById("4");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>
+  function myFunction5() {
+    var x = document.getElementById("5");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>
+  function myFunction6() {
+    var x = document.getElementById("6");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+
+ <!--  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+  } );
+  </script>
+
+
   <script>
 
    $(function(){
@@ -109,17 +177,7 @@ function calcSpeed(prev, next) {
 
 }
 </script>
-<script>
-  function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
 
-</script>
 <script>
   function myFunction2() {
     var x = document.getElementById("book");
@@ -145,32 +203,26 @@ function calcSpeed(prev, next) {
 
 
 </head>
-<body onload="move();">
+<body onload="move(); setTimeout(myFunction, 1000); setTimeout(myFunction2, 2000); setTimeout(myFunction3, 4000); setTimeout(myFunction4, 6000); setTimeout(myFunction5, 8000); setTimeout(myFunction6, 10000);">
 
-<div id="top">Memory Diagnostics Tool</div>
+<div id="top"><b>Memory Diagnostics Tool</b></div>
 
 <div id="middle" style="color:silver; font-size:1.2em;">
-A problem has been detected and windows has been shutdown to prevent damage to your computer.
-<br>
-<br>
-ISABELLA_
-<br>
-<br>
-If this is the first time you've seen this error, <a>click here</a>. If this screen appears again, follow these steps:
-<br>
-<br>
-Check to make sure any new hardware or software is properly installed. If problems continue, enable Safe Mode.
-<br>
+<div class="intro">A problem has been detected and your device has been shut down to prevent further damage.</div>
+<div class="intro">ISABELLA_</div>
+<div class="intro">If this is the first time you've seen this error, <a id="listen" style="text-decoration:underline;">Listen</a>. If this screen appears again, follow these steps:</div>
+<div class="intro">
+Check to make sure any new hardware or software is properly installed. If problems continue, enable Safe Mode.</div>
 
 
-Status:
+
 <div id="myProgress">
-  <div id="myBar"></div>
+  <div id="myBar" style="color: #040e86"><b style="margin-left:5px;">Status:</b></div>
 </div>
 <br>
-<!-- <button onclick="move()">Click Me</button> -->
 
-<div class= "row" style="margin:0px;">
+
+<div class= "row" style="margin:0px; padding:0px;">
   <div class="col-xs-12 col-sm-8 draggable" style="margin:0px">
 
 
@@ -191,28 +243,31 @@ Status:
 Technical information:
 <br>
 <br>
-overall test status: incomplete
+<div>
+<div id="1" style="display:none;">Overall test status: incomplete</div>
 <br>
+
+<div id="2"  style="display:none;">Checking for memory problems...</div>
 <br>
-Checking for memory problems...
+
+<div id="3"  style="display:none;">This might take several minutes.</div>
 <br>
+
+<div id="4"  style="display:none;">Beginning dump of physical memory</div>
 <br>
-This might take several minutes.
+
+<div id="5"  style="display:none;">Physical memory dump complete</div>
 <br>
-<br>
-Beginning dump of physical memory
-<br>
-<br>
-Physical memory dump complete
-<br>
-<br>
-Contact <%=  mail_to('isabella.koen@gmail.com',"system administrator")%> for further assistance
+
+<div id="6" style="display:none;">Contact <%=  mail_to('isabella.koen@gmail.com',"system administrator")%> for further assistance</div>
+</div>
+</div>
 
 </div>
+</div>
 
-</div>
-</div>
+<iframe  id="soundcloud_widget" style="display:none;" width="100%" height="100%" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9086934&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_playcount=false&amp;sharing=false"; ></iframe>
 <div id="bottom">
   <span style="left:0;">2017</span>
-  <span id="demo" style="right:100%"></span>
+  <span>ESC=EXIT</span>
 </div>

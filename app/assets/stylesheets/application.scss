@@ -6,16 +6,50 @@ $linkColor: Black;
 
 a {
   color: white;
+  cursor: pointer;
+}
+
+#bluescreen {
+-webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+}
+
+:-webkit-full-screen {
+  display: block !important;
+}
+:-moz-full-screen {
+  display: block !important;
+}
+:full-screen {
+  display: block !important;
+}
+:-moz-full-screen #bluescreen {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -320px;
 }
 
 
+.intro {
+  margin:10px 5px;
+}
+
+.tech {
+  display: none;
+}
+
 #top {
   height: 3vh;
-  width:100%;
-  margin:15px;
+  margin:10px 15px;
   background-color:#BCC2B6;
   text-align:center;
   color: #040e86;
+  position:relative;
 }
 
 #middle {
@@ -27,8 +61,8 @@ a {
 #bottom {
   bottom: 0;
   height: 3vh;
-  width:100%;
-  margin:15px;
+
+  margin:10px 15px;
   background-color:#BCC2B6;
   color: #040e86;
 
