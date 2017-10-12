@@ -3,9 +3,68 @@ $linkColor: Black;
 
 @import "bootstrap";
 
-
 a {
-  color: white;
+  color: limegreen;
+  cursor: pointer;
+}
+
+#bluescreen {
+-webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+}
+
+:-webkit-full-screen {
+  display: block !important;
+}
+:-moz-full-screen {
+  display: block !important;
+}
+:full-screen {
+  display: block !important;
+}
+:-moz-full-screen #bluescreen {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -320px;
+}
+
+
+.intro {
+  margin:10px 5px;
+}
+
+.tech {
+  display: none;
+}
+
+#top {
+  height: 3vh;
+  margin:10px 15px;
+  background-color:#BCC2B6;
+  text-align:center;
+  color: #040e86;
+  position:relative;
+}
+
+#middle {
+  margin-left:15px;
+  margin-right:15px;
+
+}
+
+#bottom {
+  bottom: 0;
+  height: 3vh;
+
+  margin:10px 15px;
+  background-color:#BCC2B6;
+  color: #040e86;
+
 }
 
 .header {
@@ -63,8 +122,6 @@ position:fixed;
 
 
 .row {
-  margin-left: 0px;
-  margin-right: 0px;
 
 }
 
@@ -174,7 +231,8 @@ position:fixed;
 
 a:-webkit-any-link {
   text-decoration: none;
-  color: #898909;
+  color: limegreen;
+  cursor: pointer;
 }
 
 a:hover{
@@ -200,6 +258,22 @@ a:hover{
   margin-left:5px;
   text-decoration: none;
 }
+
+
+#myProgress {
+  width: 100%;
+  height: 3vh;
+  position: relative;
+  background-color: #040e86;
+}
+
+#myBar {
+  background-color: #BCC2B6;
+  width: 10px;
+  height: 3vh;
+  position: absolute;
+}
+
 
 
 .release {

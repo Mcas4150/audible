@@ -1,16 +1,50 @@
+<div style="color:silver">
+A problem has been detected and windows has been compromised to prevent damage to your computer.
+
+ISABELLA_
+
+If this is the first time you've seen this error, <a>click here</a>, If this screen appears again, follow these steps:
+
+Check to make sure any new hardware or software is properly installed. If this is a new installation, ask your hardware or software maufacturer for any updates you might need.
+
+If problems continue, disable or remove any newly installed hardware or software and enable Safe Mode.
 
 
 
-<div class="container">
+Status:
+ <div class="row">
+ <div class="col-xs-12 col-sm-8 draggable">
 
-<div id="draggable">
-<h1>about</h1>
- <p>Isabella is based outta Boston </p>
+
+  <% @events.each do |event| %>
+
+    <div  class="row boxy">
+      <div class="col-xs-2 col-sm-2" style="color:yellow"><%= event.date %></div>
+      <div class="col-xs-3 col-sm-6" style="display:flex; flex-direction: row; align-items: center;"><%= event.name %></div>
+      <div class="col-xs-2 col-sm-3 " style="display:flex; flex-direction: row; align-items: : center; color:yellow"><%= event.location %></div>
+
+    </div>
+
+  <%end%>
+
+</div>
 </div>
 
 
+Technical information:
+
+overall test status: incomplete
+Checking for memory problems...
+This might take several minutes.
+
+Beginning dump of physical memory
+
+Physical memory dump complete
+
+Contact <%=  mail_to("system administrator", 'isabella.koen@gmail.com')%> for further assistance
 
 
 
 
 </div>
+
