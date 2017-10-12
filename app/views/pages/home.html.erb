@@ -145,13 +145,25 @@ function move() {
 }
 
 </script>
+<script>
+  function myFunction10() {
+    var x = document.getElementById("technical");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+
 
 
 
 
 
 </head>
-<body onload="move(); setTimeout(myFunction8, 500); setTimeout(myFunction9, 1000);setTimeout(myFunction, 1500); setTimeout(myFunction2, 2000); setTimeout(myFunction3, 4000); setTimeout(myFunction4, 6000); setTimeout(myFunction5, 8000); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
+<body onload="move(); setTimeout(myFunction8, 500); setTimeout(myFunction9, 2000); setTimeout(myFunction10, 3000); setTimeout(myFunction, 3500); setTimeout(myFunction2, 4000); setTimeout(myFunction3, 5500); setTimeout(myFunction4, 7000); setTimeout(myFunction5, 8500); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
 
 <div id="top"><b>Memory Diagnostics Tool</b></div>
 
@@ -191,7 +203,7 @@ Ensure any new hardware or software is properly installed. If problems continue,
 </div>
 
 <div class="col-xs-12 col-sm-4 draggable">
-<div class="intro">Technical information:</div>
+<div id="technical" class="intro" style="display:none;">Technical information:</div>
 <div>
 <br>
 <div id="1" class="intro" style="display:none;">Overall test status: incomplete</div>
