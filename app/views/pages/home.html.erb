@@ -27,7 +27,7 @@ function myTimer() {
 function move() {
   var elem = document.getElementById("myBar");
   var width = 0;
-  var id = setInterval(frame, 20);
+  var id = setInterval(frame, 100);
   function frame() {
     if (width == 100) {
       clearInterval(id);
@@ -253,16 +253,17 @@ Ensure any new hardware or software is properly installed. If problems continue,
 <div class="col-xs-12 col-sm-4 draggable">
 <div class="intro">Technical information:</div>
 <div>
+<br>
 <div id="1" class="intro" style="display:none;">Overall test status: incomplete</div>
-
+<br>
 <div id="2" class="intro" style="display:none;">Checking for memory problems...</div>
 
 <div id="3" class="intro" style="display:none;">This might take several minutes.</div>
-
+<br>
 <div id="4" class="intro" style="display:none;">Beginning dump of physical memory</div>
 
 <div id="5" class="intro" style="display:none;">Physical memory dump complete</div>
-
+<br>
 <div id="6" class="intro" style="display:none;">Contact <%=  mail_to('isabella.koen@gmail.com',"system administrator")%></div>
 </div>
 </div>
