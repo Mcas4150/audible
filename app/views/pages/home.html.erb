@@ -123,22 +123,48 @@ function move() {
 }
 
 </script>
+<script>
+  function myFunction8() {
+    var x = document.getElementById("first");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>
+  function myFunction9() {
+    var x = document.getElementById("second");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
 
 
 
 
 
 </head>
-<body onload="move(); setTimeout(myFunction, 1000); setTimeout(myFunction2, 2000); setTimeout(myFunction3, 4000); setTimeout(myFunction4, 6000); setTimeout(myFunction5, 8000); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
+<body onload="move(); setTimeout(myFunction8, 500); setTimeout(myFunction9, 1000);setTimeout(myFunction, 1500); setTimeout(myFunction2, 2000); setTimeout(myFunction3, 4000); setTimeout(myFunction4, 6000); setTimeout(myFunction5, 8000); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
 
 <div id="top"><b>Memory Diagnostics Tool</b></div>
 
 <div id="middle" style="color:silver; font-size:1em;">
+<div id="first" style="display:none;">
 <div class="intro">A problem has been detected and your device has been compromised to prevent further damage.</div>
 <div class="intro" style="color:red;">ISABELLA_</div>
+</div>
+<div id="second" style="display:none;">
 <div class="intro">If this is the first time you've seen this error, <a id="listen" style="color:white;">Listen</a>. If this screen appears again, follow these steps:</div>
 <div class="intro">
 Ensure any new hardware or software is properly installed. If problems continue, enable Safe Mode.</div>
+</div>
 
 
 
