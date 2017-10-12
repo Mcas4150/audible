@@ -170,10 +170,10 @@ function move() {
 <div id="middle" style="color:silver; font-size:1em;">
 <div id="first" style="display:none;">
 <div class="intro">A problem has been detected and your device has been compromised to prevent further damage.</div>
-<div class="intro" style="color:red;">ISABELLA_</div>
+<div class="intro" style="background-color:red; color:silver; display:inline-block;">ISABELLA_</div>
 </div>
 <div id="second" style="display:none;">
-<div class="intro">If this is the first time you've seen this error, <a id="listen" style="color:white;">Listen</a>. If this screen appears again, follow these steps:</div>
+<div class="intro">If this is the first time you've seen this error, <a id="listen" style="color:black;">Listen</a>. If this screen appears again, follow these steps:</div>
 <div class="intro">
 Ensure any new hardware or software is properly installed. If problems continue, enable Safe Mode.</div>
 </div>
@@ -192,9 +192,9 @@ Ensure any new hardware or software is properly installed. If problems continue,
   <% @events.each do |event| %>
 
     <div  class="row boxy">
-      <div class="col-xs-2 col-sm-2" style="color:yellow;"><%= event.date %></div>
+      <div class="col-xs-3 col-sm-3 col-md-3" style="color:yellow;"><%= event.date %></div>
 
-      <div class="col-xs-2 col-sm-2 " style="display:flex; flex-direction: row; align-items: : center; color:silver;"><%= event.location %></div>
+      <div class="col-xs-3 col-sm-3 col-md-3 " style="display:flex; flex-direction: row; align-items: : center; color:silver;"><%= event.location %></div>
       <div class="col-xs-3 col-sm-6" style="display:flex; flex-direction: row; align-items: center; color:white;"><%= event.name %></div>
     </div>
 
@@ -205,7 +205,6 @@ Ensure any new hardware or software is properly installed. If problems continue,
 <div class="col-xs-12 col-sm-4 draggable">
 <div id="technical" class="intro" style="display:none;">Technical information:</div>
 <div>
-<br>
 <div id="1" class="intro" style="display:none;">Overall test status: incomplete</div>
 <br>
 <div id="2" class="intro" style="display:none;">Checking for memory problems...</div>
