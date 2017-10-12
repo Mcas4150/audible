@@ -3,9 +3,8 @@ $linkColor: Black;
 
 @import "bootstrap";
 
-
 a {
-  color: white;
+  color: limegreen;
   cursor: pointer;
 }
 
@@ -233,6 +232,7 @@ position:fixed;
 a:-webkit-any-link {
   text-decoration: none;
   color: limegreen;
+  cursor: pointer;
 }
 
 a:hover{
