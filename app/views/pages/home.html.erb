@@ -116,6 +116,17 @@ function move() {
 }
 
 </script>
+<script>
+  function myFunction7() {
+    var x = document.getElementById("shows");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
 
  <!--  <script>
   $( function() {
@@ -203,12 +214,12 @@ function calcSpeed(prev, next) {
 
 
 </head>
-<body onload="move(); setTimeout(myFunction, 1000); setTimeout(myFunction2, 2000); setTimeout(myFunction3, 4000); setTimeout(myFunction4, 6000); setTimeout(myFunction5, 8000); setTimeout(myFunction6, 10000);">
+<body onload="move(); setTimeout(myFunction, 1000); setTimeout(myFunction2, 2000); setTimeout(myFunction3, 4000); setTimeout(myFunction4, 6000); setTimeout(myFunction5, 8000); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
 
 <div id="top"><b>Memory Diagnostics Tool</b></div>
 
 <div id="middle" style="color:silver; font-size:1.2em;">
-<div class="intro">A problem has been detected and your device has been shut down to prevent further damage.</div>
+<div class="intro">A problem has been detected and your device has been compromised to prevent further damage.</div>
 <div class="intro">ISABELLA_</div>
 <div class="intro">If this is the first time you've seen this error, <a id="listen" style="text-decoration:underline;">Listen</a>. If this screen appears again, follow these steps:</div>
 <div class="intro">
@@ -217,13 +228,12 @@ Check to make sure any new hardware or software is properly installed. If proble
 
 
 <div id="myProgress">
-  <div id="myBar" style="color: #040e86"><b style="margin-left:5px;">Status:</b></div>
+  <div id="myBar" style="color: #040e86"><div style="margin-left:5px;">Status:</div></div>
 </div>
-<br>
 
 
-<div class= "row" style="margin:0px; padding:0px;">
-  <div class="col-xs-12 col-sm-8 draggable" style="margin:0px">
+<div class= "row" style=" padding:0px;">
+  <div id="shows" class="col-xs-12 col-sm-8 draggable" style="display:none;">
 
 
   <% @events.each do |event| %>
@@ -239,27 +249,20 @@ Check to make sure any new hardware or software is properly installed. If proble
 
 </div>
 
-<div class="col-xs-12 col-sm-4 draggable" style="margin:0px">
-Technical information:
-<br>
-<br>
+<div class="col-xs-12 col-sm-4 draggable">
+<div class="intro">Technical information:</div>
 <div>
-<div id="1" style="display:none;">Overall test status: incomplete</div>
-<br>
+<div id="1" class="intro" style="display:none;">Overall test status: incomplete</div>
 
-<div id="2"  style="display:none;">Checking for memory problems...</div>
-<br>
+<div id="2" class="intro" style="display:none;">Checking for memory problems...</div>
 
-<div id="3"  style="display:none;">This might take several minutes.</div>
-<br>
+<div id="3" class="intro" style="display:none;">This might take several minutes.</div>
 
-<div id="4"  style="display:none;">Beginning dump of physical memory</div>
-<br>
+<div id="4" class="intro" style="display:none;">Beginning dump of physical memory</div>
 
-<div id="5"  style="display:none;">Physical memory dump complete</div>
-<br>
+<div id="5" class="intro" style="display:none;">Physical memory dump complete</div>
 
-<div id="6" style="display:none;">Contact <%=  mail_to('isabella.koen@gmail.com',"system administrator")%> for further assistance</div>
+<div id="6" class="intro" style="display:none;">Contact <%=  mail_to('isabella.koen@gmail.com',"system administrator")%></div>
 </div>
 </div>
 
@@ -268,6 +271,6 @@ Technical information:
 
 <iframe  id="soundcloud_widget" style="display:none;" width="100%" height="100%" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/9086934&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_playcount=false&amp;sharing=false"; ></iframe>
 <div id="bottom">
-  <span style="left:0;">2017</span>
+  <span style="left:0; margin-left:5px;">2017</span>
   <span>ESC=EXIT</span>
 </div>
