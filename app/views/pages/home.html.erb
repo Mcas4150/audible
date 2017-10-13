@@ -158,6 +158,17 @@ function move() {
 }
 
 </script>
+<script>
+  function myFunction11() {
+    var x = document.getElementById("iz");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
 
 
 
@@ -165,14 +176,14 @@ function move() {
 
 
 </head>
-<body onload="move(); setTimeout(myFunction8, 500); setTimeout(myFunction9, 2000); setTimeout(myFunction10, 3000); setTimeout(myFunction, 3500); setTimeout(myFunction2, 4000); setTimeout(myFunction3, 5500); setTimeout(myFunction4, 7000); setTimeout(myFunction5, 8500); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
+<body onload="move(); setTimeout(myFunction8, 500); setTimeout(myFunction11, 1000);setTimeout(myFunction9, 2000); setTimeout(myFunction10, 3000); setTimeout(myFunction, 3500); setTimeout(myFunction2, 4000); setTimeout(myFunction3, 5500); setTimeout(myFunction4, 7000); setTimeout(myFunction5, 8500); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
 
 <div id="top"><b>Memory Diagnostics Tool</b></div>
 
 <div id="middle" style="color:silver; font-size:1em;">
 <div id="first" style="display:none;">
 <div class="intro">A problem has been detected and your device was compromised to prevent further damage by a malicious user,</div>
-<div class="intro" style="background-color:red; color:silver; display:inline-block;">ISABELLA_</div>
+<div id="iz" style="display:none; " > <div class="intro" style="background-color:red; color:silver; display:inline-block;">ISABELLA_</div></div>
 <div id="second" style="display:none;">
 <div class="intro">If this is the first time you've seen this error, <a id="listen" class="help" style="background-color:#BCC2B6; color:black; display: inline-block; border-style:ridge; border-width:1px; border-color:#999999;">Click Here</a> If this screen appears again, follow these steps:</div>
 <div class="intro">
