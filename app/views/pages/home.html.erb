@@ -180,20 +180,24 @@ $(document).ready(function() {
 
 });
 </script>
-
-
+<script>
+var elem = document.getElementById("whole");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+}
+</script>
 
 
 
 </head>
 <body onload="move(); setTimeout(myFunction8, 500); setTimeout(myFunction11, 1000);setTimeout(myFunction9, 2000); setTimeout(myFunction10, 3000); setTimeout(myFunction, 3500); setTimeout(myFunction2, 4000); setTimeout(myFunction3, 5500); setTimeout(myFunction4, 7000); setTimeout(myFunction5, 8500); setTimeout(myFunction6, 10000); setTimeout(myFunction7, 10000)">
-
+<div id="whole">
 <div id="top"><b>Memory Diagnostics Tool</b></div>
 
 <div id="middle" style="color:silver; font-size:1em;">
 <div id="first" style="display:none;">
 <div class="intro">A problem has been detected and your device was compromised to prevent further damage by a malicious user,</div>
-<div id="iz" style="display:none; " > <div class="intro" style="background-color:red; color:silver; display:inline-block;">ISABELLA<span id="blinker">_</span></div></div>
+<div id="iz" style="display:none; " > <div class="intro" style="background-color:red; color:white; display:inline-block;">ISABELLA<span id="blinker">_</span></div></div>
 <div id="second" style="display:none;">
 <div class="intro">If this is the first time you've seen this error, <a id="listen" class="help" style="background-color:#BCC2B6; color:black; display: inline-block; border-style:ridge; border-width:1px; border-color:#999999;">Click Here</a> If this screen appears again, follow these steps:</div>
 <div class="intro">
@@ -251,4 +255,5 @@ Ensure any new hardware or software is properly installed. If problems continue,
 <div id="bottom">
 
   <span style="display:flex; flex-direction: horizontal; justify-content: flex-end; margin-right:5px;"><b>ESC=EXIT</b></span>
+</div>
 </div>
