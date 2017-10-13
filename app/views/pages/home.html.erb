@@ -4,6 +4,7 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_link_tag 'favicon.ico' %>
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="https://w.soundcloud.com/player/api.js"></script>
@@ -170,6 +171,15 @@ function move() {
 
 </script>
 
+<script>
+$(document).ready(function() {
+    var f = document.getElementById('blinker');
+    setInterval(function() {
+        f.style.display = (f.style.display == 'none' ? '' : 'none');
+    }, 1000);
+
+});
+</script>
 
 
 
@@ -183,7 +193,7 @@ function move() {
 <div id="middle" style="color:silver; font-size:1em;">
 <div id="first" style="display:none;">
 <div class="intro">A problem has been detected and your device was compromised to prevent further damage by a malicious user,</div>
-<div id="iz" style="display:none; " > <div class="intro" style="background-color:red; color:silver; display:inline-block;">ISABELLA_</div></div>
+<div id="iz" style="display:none; " > <div class="intro" style="background-color:red; color:silver; display:inline-block;">ISABELLA<span id="blinker">_</span></div></div>
 <div id="second" style="display:none;">
 <div class="intro">If this is the first time you've seen this error, <a id="listen" class="help" style="background-color:#BCC2B6; color:black; display: inline-block; border-style:ridge; border-width:1px; border-color:#999999;">Click Here</a> If this screen appears again, follow these steps:</div>
 <div class="intro">
